@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Ricartes | Inteligência de Dados para o Agronegócio</title>
+    <meta name="description" content="Portfólio de André Ricartes - Especialista em Inteligência de Dados para o Agronegócio, Big Data e Geoprocessamento em Bebedouro-SP.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        agtech: {
+                            black: '#0a0a0a',   /* Fundo principal escuro */
+                            dark: '#171717',    /* Fundo seções secundárias */
+                            gray: '#262626',    /* Bordas e painéis */
+                            emerald: '#10b981', /* Destaques verde esmeralda */
+                            emeraldHover: '#059669',
+                            light: '#e5e7eb'
+                        }
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        
+        /* Tema glassmorphism industrial */
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981; 
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-agtech-emerald selection:text-white">
+
+    <!-- Decorações de Fundo (Background effects) -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-agtech-emerald rounded-full mix-blend-screen filter blur-[150px] opacity-[0.15] animate-float"></div>
+        <div class="absolute top-[60%] -left-[10%] w-[400px] h-[400px] bg-agtech-emerald rounded-full mix-blend-screen filter blur-[150px] opacity-[0.1] animate-float" style="animation-delay: 3s;"></div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="fixed w-full top-0 z-50 glass-panel border-b border-white/5 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter text-white">
+                André<span class="text-agtech-emerald">Ricartes</span>
+            </div>
+            <nav class="hidden md:flex gap-8">
+                <a href="#sobre" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Sobre</a>
+                <a href="#expertise" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Expertise</a>
+                <a href="#publicacoes" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Publicações</a>
+                <a href="#contato" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 px-6 overflow-hidden">
+        <div class="container mx-auto text-center z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-agtech-emerald/20 bg-agtech-emerald/10 text-agtech-emerald text-sm font-semibold tracking-wide shadow-[0_0_20px_rgba(16,185,129,0.15)]">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-agtech-emerald opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-agtech-emerald"></span>
+                </span>
+                GEOPROCESSAMENTO & BIG DATA
+            </div>
+            
+            <!-- Headline -->
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] text-white">
+                Inteligência de Dados <br class="hidden md:block"/>
+                para o <span class="text-transparent bg-clip-text bg-gradient-to-r from-agtech-emerald to-emerald-200 animate-gradient-x">Agronegócio</span>
+            </h1>
+            
+            <!-- Subheadline -->
+            <p class="mt-4 text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed mb-12">
+                Transformando dados complexos do campo em decisões estratégicas, precisas e sustentáveis.
+            </p>
+            
+            <!-- CTA -->
+            <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                <a href="mailto:contato@andrericartes.com.br" class="px-8 py-4 bg-agtech-emerald hover:bg-agtech-emeraldHover text-white font-bold rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.25)] hover:shadow-[0_0_35px_rgba(16,185,129,0.4)] transform hover:-translate-y-1 w-full sm:w-auto">
+                    Solicitar Consultoria
+                </a>
+                <a href="#expertise" class="px-8 py-4 bg-transparent border border-gray-600 hover:border-agtech-emerald text-gray-300 hover:text-white rounded-xl transition-colors duration-300 font-semibold w-full sm:w-auto">
+                    Conhecer Expertise
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section id="sobre" class="py-32 px-6 bg-[#0E0E0E] relative border-y border-white/5">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Imagem / Destaque Visual -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-agtech-emerald to-[#047857] rounded-[2rem] blur-xl opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative glass-panel p-10 md:p-14 rounded-[2rem] h-full border border-gray-800/80 shadow-2xl">
+                        <div class="w-16 h-16 bg-agtech-emerald/10 text-agtech-emerald rounded-2xl flex flex-col justify-center items-center mb-8 border border-agtech-emerald/20 shadow-[0_0_20px_rgba(16,185,129,0.1)]">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 19.5 16.5h-2.25m-9 0h9l-3 3m-3-3-3 3m1-16.5v3.626q.002.261.246.425L11 10q.244.164.498.058l1.968-1.579q.253-.105.498-.058l1.246.685q.244.164.246-.425V3" />
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white tracking-tight leading-tight">Conectando Tecnologia e as Raízes do Campo</h2>
+                        <div class="space-y-6">
+                            <p class="text-agtech-emerald text-xl leading-relaxed italic font-medium">
+                                "A terra não mente, mas os dados revelam o que os olhos não veem."
+                            </p>
+                            <p class="text-gray-400 text-lg leading-relaxed">
+                                Combinando <strong class="text-white font-semibold">36+ anos de experiência prática de campo</strong> com Ciência de Dados, Inteligência Artificial e <strong class="text-white font-semibold">Geoprocessamento</strong>, desenvolvo soluções robustas para Regularização Fundiária e Agricultura 5.0.
+                            </p>
+                            <p class="text-gray-400 text-lg leading-relaxed border-l-2 border-agtech-emerald pl-5">
+                                Baseado em <strong class="text-agtech-emerald font-semibold">Bebedouro-SP</strong>, pesquiso e aplico tecnologias emergentes (Python, GIS, IoT, AI) para garantir segurança jurídica e máxima eficiência agronômica aos produtores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Pilares -->
+                <div class="space-y-12">
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-14 h-14 rounded-2xl bg-agtech-gray/50 border border-gray-700 flex-shrink-0 flex items-center justify-center text-agtech-emerald group-hover:bg-agtech-emerald/10 group-hover:border-agtech-emerald/30 transition-all">
+                            <span class="font-black text-xl">01</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-agtech-emerald transition-colors">Visão Analítica (Big Data)</h3>
+                            <p class="text-gray-400 leading-relaxed text-lg">Metodologias robustas de processamento e estruturação de grandes volumes de dados agronômicos para gerar insights estratégicos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-14 h-14 rounded-2xl bg-agtech-gray/50 border border-gray-700 flex-shrink-0 flex items-center justify-center text-agtech-emerald group-hover:bg-agtech-emerald/10 group-hover:border-agtech-emerald/30 transition-all">
+                            <span class="font-black text-xl">02</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-agtech-emerald transition-colors">Inteligência Espacial</h3>
+                            <p class="text-gray-400 leading-relaxed text-lg">Aplicação de sistemas de informações geográficas (SIG) para analise detalhada do espaço agrário, regularização e gestão da propriedade.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-32 px-6 relative">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Áreas de <span class="text-agtech-emerald">Expertise</span></h2>
+                <p class="text-xl text-gray-400 font-light">Soluções tecnológicas robustas e feitas sob medida para impulsionar a eficiência operacional e a conformidade do seu negócio rural.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 relative z-10">
+                
+                <!-- Card 1 -->
+                <div class="glass-panel p-10 rounded-[2rem] group hover:-translate-y-3 transition-all duration-300 border border-gray-800 hover:border-agtech-emerald/40 hover:shadow-[0_20px_40px_rgba(16,185,129,0.1)] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-agtech-emerald/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="w-16 h-16 bg-[#111] text-agtech-emerald rounded-2xl flex items-center justify-center mb-8 border border-gray-700 group-hover:border-agtech-emerald/40 group-hover:bg-agtech-emerald/10 transition-colors shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18l-1.006.503m18-13.498-4.875 2.437c-.381.19-.622.58-.622 1.006v11.28c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 leading-snug group-hover:text-agtech-emerald transition-colors">Geointeligência Rural <br/>(CAR/INCRA)</h3>
+                    <p class="text-gray-400 group-hover:text-gray-300 transition-colors text-lg leading-relaxed">
+                        Mapeamento preciso, regularização fundiária e ambiental. Expertise completa em documentação, análise de shapefiles e adequação às normativas rigorosas do CAR e INCRA.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-panel p-10 rounded-[2rem] group hover:-translate-y-3 transition-all duration-300 border border-gray-800 hover:border-agtech-emerald/40 hover:shadow-[0_20px_40px_rgba(16,185,129,0.1)] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-agtech-emerald/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <div class="w-16 h-16 bg-[#111] text-agtech-emerald rounded-2xl flex items-center justify-center mb-8 border border-gray-700 group-hover:border-agtech-emerald/40 group-hover:bg-agtech-emerald/10 transition-colors shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 leading-snug group-hover:text-agtech-emerald transition-colors">Monitoramento<br/>via Satélite</h3>
+                    <p class="text-gray-400 group-hover:text-gray-300 transition-colors text-lg leading-relaxed">
+                        Acompanhamento contínuo da saúde das lavouras (NDVI, NDWI). Utilização de sensoriamento remoto para identificar anomalias, planejar aplicações e estimar safras.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-panel p-10 rounded-[2rem] group hover:-translate-y-3 transition-all duration-300 border border-gray-800 hover:border-agtech-emerald/40 hover:shadow-[0_20px_40px_rgba(16,185,129,0.1)] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-agtech-emerald/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <div class="w-16 h-16 bg-[#111] text-agtech-emerald rounded-2xl flex items-center justify-center mb-8 border border-gray-700 group-hover:border-agtech-emerald/40 group-hover:bg-agtech-emerald/10 transition-colors shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 leading-snug group-hover:text-agtech-emerald transition-colors">Engenharia de Dados <br/>& Python</h3>
+                    <p class="text-gray-400 group-hover:text-gray-300 transition-colors text-lg leading-relaxed">
+                        Desenvolvimento de algoritmos em Python (Pandas, GeoPandas), automação de fluxos ETl e modelagem. Transformando dados brutos em bases analíticas estruturadas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publicações Section -->
+    <section id="publicacoes" class="py-32 px-6 bg-[#0c0c0c] relative border-t border-white/5">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Pesquisa & <span class="text-agtech-emerald">Publicações</span></h2>
+                <p class="text-xl text-gray-400 font-light">Contribuições acadêmicas e inovações reconhecidas na união do agro com o estado da arte da tecnologia.</p>
+            </div>
+            
+            <div class="glass-panel p-8 md:p-12 rounded-[2rem] border border-gray-800 hover:border-agtech-emerald/30 transition-all duration-300 relative group overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-agtech-emerald/5 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform duration-700"></div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-start relative z-10">
+                    <div class="w-16 h-16 bg-[#111] text-agtech-emerald rounded-2xl flex-shrink-0 flex items-center justify-center border border-gray-700 shadow-[0_0_20px_rgba(16,185,129,0.15)] group-hover:bg-agtech-emerald/10 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-3 mb-4">
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-agtech-emerald/10 text-agtech-emerald border border-agtech-emerald/20">Artigo Científico</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-gray-800 text-gray-300 border border-gray-700">Revista Interface Tecnológica</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-gray-800 text-gray-300 border border-gray-700">2025</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 leading-tight group-hover:text-agtech-emerald transition-colors">PROTÓTIPO DE SENSOR DE ANÁLISE DE SOLO COM IA EMBUTIDA</h3>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            Estudo sobre o desenvolvimento de um sensor IoT com algoritmos de Aprendizado de Máquina (Machine Learning) embarcados para a leitura instantânea de nutrientes (fósforo e potássio) no solo, comparando a eficácia com exames laboratoriais tradicionais e pavimentando o futuro da Agricultura de Precisão.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://revista.fatectq.edu.br/interfacetecnologica/pt_BR/article/view/2040/1169" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-agtech-emerald hover:text-agtech-emeraldHover transition-colors">
+                                Ler Artigo (PDF)
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                            <a href="https://doi.org/10.31510/infa.v22i1.2040" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-400 hover:text-white transition-colors">
+                                Ver DOI
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="contato" class="py-32 px-6 relative border-t border-white/5">
+        <div class="container mx-auto max-w-5xl">
+            <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+                <!-- Background Decoration inside CTA -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#0a0a0a] via-[#111827] to-[#042f2e] z-0"></div>
+                <div class="absolute top-0 right-0 w-80 h-80 bg-agtech-emerald opacity-20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                
+
+                <div class="relative z-10 px-8 py-20 md:py-28 text-center border border-agtech-emerald/20 rounded-[2.5rem] backdrop-blur-sm">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8 tracking-tight">Pronto para elevar a<br/>gestão da sua área?</h2>
+                    <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                        Vamos conversar sobre como a inteligência de dados espaciais e a tecnologia podem otimizar seus resultados e garantir conformidade em seus projetos rurais.
+                    </p>
+                    <a href="mailto:contato@andrericartes.com.br" class="inline-flex items-center gap-3 px-10 py-5 bg-agtech-emerald hover:bg-agtech-emeraldHover text-white text-lg font-bold rounded-2xl transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] transform hover:scale-105 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 group-hover:rotate-12 transition-transform">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                        </svg>
+                        Solicitar Consultoria
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-[#050505] py-12 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-2xl font-bold tracking-tighter text-white">
+                André<span class="text-agtech-emerald">Ricartes</span>
+            </div>
+            
+            <p class="text-gray-500 text-sm text-center md:text-left font-medium">
+                &copy; <script>document.write(new Date().getFullYear())</script> André Ricartes. Inteligência Geográfica.
+            </p>
+            
+            <div class="flex gap-4">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/andrericartes/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="Conectar no LinkedIn" class="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-[#0A66C2] hover:bg-[#0A66C2]/10 transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/AndreRicartes" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="Ver projetos no GitHub" class="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-500 hover:bg-gray-800 transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
