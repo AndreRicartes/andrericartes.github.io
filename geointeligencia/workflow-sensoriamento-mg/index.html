@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow de Alta Resolução e Big Data no Sensoriamento de Minas Gerais | André Ricartes</title>
+    <!-- Max 155 chars SEO description -->
+    <meta name="description" content="Demonstração da capacidade tecnológica utilizando Sentinel-2, CBERS-4A, DuckDB e Python para processamento de dados geográficos e laudos imparciais em MG.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Workflow de Alta Resolução e Big Data no Sensoriamento de Minas Gerais",
+      "description": "Demonstração da capacidade tecnológica utilizando Sentinel-2, CBERS-4A, DuckDB e Python para processamento de dados geográficos e laudos imparciais em MG.",
+      "author": {
+        "@type": "Person",
+        "name": "André Ricartes"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "André Ricartes | Geointeligência"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], },
+                    colors: {
+                        agtech: {
+                            black: '#0a0a0a',
+                            dark: '#171717',
+                            gray: '#262626',
+                            emerald: '#10b981',
+                            emeraldHover: '#059669',
+                            light: '#e5e7eb'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: #e5e7eb; }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.3);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Custom styles for article content */
+        .prose h2 { color: #fff; font-size: 1.875rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem; }
+        .prose h3 { color: #fff; font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #9ca3af; font-size: 1.125rem; }
+        .prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc; color: #9ca3af; font-size: 1.125rem; line-height: 1.8; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose strong { color: #e5e7eb; font-weight: 600; }
+        .tech-quote { border-left: 4px solid #10b981; padding-left: 1.5rem; font-style: italic; background: rgba(16, 185, 129, 0.05); padding: 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 2rem; }
+    </style>
+</head>
+<body class="antialiased selection:bg-agtech-emerald selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 glass-panel border-b border-white/5 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../" class="text-2xl font-extrabold tracking-tighter text-white">
+                André<span class="text-agtech-emerald">Ricartes</span>
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="../../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Início</a>
+                <a href="../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Geointeligência</a>
+                <a href="../analises/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Análises</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-32 pb-24 max-w-4xl">
+        <article>
+            <div class="mb-12 border-b border-white/5 pb-10">
+                <div class="flex gap-3 mb-6">
+                    <span class="px-3 py-1 rounded-full bg-agtech-emerald/10 text-agtech-emerald text-sm font-semibold border border-agtech-emerald/20">Capacidade Tecnológica</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm font-semibold border border-gray-700">Técnico/Processual</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                    Workflow de Alta Resolução e Big Data no Sensoriamento de Minas Gerais
+                </h1>
+                <div class="flex items-center gap-4 text-gray-400">
+                    <div class="w-10 h-10 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-agtech-emerald font-bold">AR</div>
+                    <div>
+                        <p class="font-semibold text-white">André Ricartes</p>
+                        <p class="text-sm">Especialista em Geointeligência Rural</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prose max-w-none">
+                <h2>Introdução: Da Imagem Bruta ao Laudo Imparcial</h2>
+                <p>
+                    Nos dois primeiros artigos desta série, vimos como o NDVI (Índice de Vegetação por Diferença Normalizada) consegue comprovar a recuperação do solo e o ganho patrimonial no campo. No entanto, para que esse dado seja aceito em litígios ou por fundos de investimento, é preciso explicar o motor tecnológico por trás da análise.
+                </p>
+                <div class="tech-quote">
+                    <p class="mb-0 text-white font-medium">A exatidão de um laudo técnico não depende de uma única imagem isolada, mas da nossa capacidade de processar grandes volumes de dados (<strong class="text-agtech-emerald">Big Data</strong>) e extrair informações precisas de múltiplas fontes orbitais.</p>
+                </div>
+                <p>
+                    Abaixo, detalhamos o workflow computacional e espectral que utilizamos em nossos projetos de geointeligência em regiões de transição, como as de Minas Gerais e Mato Grosso.
+                </p>
+
+                <h2>1. O Pipeline de Dados: De Terabytes a Prova</h2>
+                <p>
+                    Para analisar a evolução da vegetação e o vigor do solo sem depender de análises puramente visuais, estruturamos um ambiente de processamento de dados moderno, utilizando ferramentas de alto desempenho. O processamento é dividido em quatro etapas:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Ingestão e Filtragem (AWS/ESA/INPE):</strong> Baixamos imagens corrigidas atmosfericamente (Level-2A). O uso do sensor WPM do CBERS-4A nos permite atingir uma resolução espacial submétrica de 2 metros, essencial para identificar áreas de regeneração em locais de relevo complexo.
+                    </li>
+                    <li>
+                        <strong>Processamento com DuckDB:</strong> Em vez de utilizar softwares pesados para cada etapa, processamos os metadados e os cubos de dados diretamente com DuckDB, o que nos permite consultar séries históricas de reflectância em segundos.
+                    </li>
+                    <li>
+                        <strong>Automação com GeoPandas e Python:</strong> Rodamos algoritmos de calibração para isolar o solo exposto do aumento de biomassa da pastagem ou floresta nativa.
+                    </li>
+                </ul>
+
+                <h2>2. A Validação Espectral: Separando "O Verde" do "O Produtivo"</h2>
+                <p>
+                    A grande dúvida que peritos e juízes apresentam é: <em>"Como sabemos que o local foi de fato recuperado e não se trata apenas de vegetação nativa que cresceu por acaso?"</em>
+                </p>
+                <p>A resposta reside na análise da reflectância da superfície:</p>
+                <ul>
+                    <li>
+                        <strong>Assinatura do Solo Exposto:</strong> Altos valores na faixa do vermelho e menores no infravermelho.
+                    </li>
+                    <li>
+                        <strong>Assinatura da Área Recuperada (Manejo Ativo):</strong> Inflexão íngreme na curva de absorção de clorofila. A reflectância no infravermelho próximo (NIR) dispara, enquanto o vermelho é absorvido pelas folhas.
+                    </li>
+                </ul>
+                <p>
+                    A comparação dessa curva ao longo dos anos — de 2010 a 2026 — gera o que chamamos de <strong>inércia produtiva</strong>, provando que o ganho de biomassa é contínuo e resultado de investimento técnico.
+                </p>
+
+                <h2>3. Integração com a Legislação e Segurança Jurídica</h2>
+                <p>
+                    Um laudo de recuperação em Minas Gerais deve estar alinhado com as diretrizes de uso do solo, como o Código Florestal Brasileiro e resoluções estaduais. Ao usar um banco de dados geoespacial para cruzar a área recuperada com imagens de altíssima resolução (Maxar/Airbus), eliminamos a subjetividade das inspeções tradicionais.
+                </p>
+
+                <h2>Conclusão: A Ciência dos Dados como Vantagem Competitiva</h2>
+                <p>
+                    A tecnologia de sensoriamento remoto transformou os laudos ambientais de estimativas visuais para análises de precisão baseadas em leis físicas. Ao modernizar o workflow com Big Data, garantimos que qualquer mudança no terreno seja registrada de forma incontestável.
+                </p>
+            </div>
+        </article>
+
+        <!-- Contextual CTA Area -->
+        <div class="mt-20 glass-panel p-10 md:p-14 rounded-[2.5rem] border border-agtech-emerald/30 text-center relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-br from-agtech-emerald/5 to-[#000] z-0"></div>
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-agtech-emerald to-transparent"></div>
+            
+            <div class="relative z-10">
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Precisa de uma análise técnica de alta precisão para o seu projeto em MG ou MT?</h3>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Conheça nossa Consultoria em Geointeligência Rural e transforme os dados do seu imóvel em vantagem estratégica.
+                </p>
+                <a href="../../#servicos" class="inline-flex items-center gap-3 px-8 py-4 bg-agtech-emerald hover:bg-agtech-emeraldHover text-white text-lg font-bold rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.25)]">
+                    Consultoria em Geointeligência Rural
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="border-t border-white/10 bg-[#050505] py-12 px-6">
+        <div class="container mx-auto text-center">
+            <div class="text-xl font-bold tracking-tighter text-white mb-4">
+                André<span class="text-agtech-emerald">Ricartes</span>
+            </div>
+            <p class="text-gray-500 text-sm font-medium">
+                &copy; 2026 André Ricartes. Todos os direitos reservados. Inteligência Geográfica.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
