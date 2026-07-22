@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://www.andrericartes.com/geointeligencia/analises/geointeligencia-solo-raso-supressao-vegetal/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geointeligência para Solo Raso: Planeje a Supressão Vegetal | André Ricartes</title>
+    <!-- Max 155 chars SEO description -->
+    <meta name="description" content="Como usar sensoriamento remoto e imagens de satélite para identificar solo raso e priorizar áreas de supressão vegetal com mais segurança técnica.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Geointeligência para Solo Raso: Planeje a Supressão Vegetal com Segurança Técnica",
+      "description": "Como usar sensoriamento remoto e imagens de satélite para identificar solo raso e priorizar áreas de supressão vegetal com mais segurança técnica.",
+      "author": {
+        "@type": "Person",
+        "name": "André Ricartes"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "André Ricartes | Geointeligência"
+      },
+      "datePublished": "2026-07-22"
+    }
+    </script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], },
+                    colors: {
+                        agtech: {
+                            black: '#0a0a0a',
+                            dark: '#171717',
+                            gray: '#262626',
+                            emerald: '#10b981',
+                            emeraldHover: '#059669',
+                            light: '#e5e7eb'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: #e5e7eb; }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.3);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Custom styles for article content */
+        .prose h2 { color: #fff; font-size: 1.875rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem; }
+        .prose h3 { color: #fff; font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #9ca3af; font-size: 1.125rem; }
+        .prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc; color: #9ca3af; font-size: 1.125rem; line-height: 1.8; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose strong { color: #e5e7eb; font-weight: 600; }
+        .tech-quote { border-left: 4px solid #10b981; padding-left: 1.5rem; font-style: italic; background: rgba(16, 185, 129, 0.05); padding: 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 2rem; }
+    </style>
+</head>
+<body class="antialiased selection:bg-agtech-emerald selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 glass-panel border-b border-white/5 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../../" class="text-2xl font-extrabold tracking-tighter text-white">
+                André<span class="text-agtech-emerald">Ricartes</span>
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="../../../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Início</a>
+                <a href="../../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Geointeligência</a>
+                <a href="../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Análises</a>
+            </nav>
+            <!-- Botão Menu Hamburguer (Mobile) -->
+            <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-[#0a0a0ab3] backdrop-blur-lg px-6 py-4 flex flex-col gap-4">
+            <a href="../../../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Início</a>
+            <a href="../../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Geointeligência</a>
+            <a href="../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Análises</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-32 pb-24 max-w-4xl">
+        <article>
+            <div class="mb-12 border-b border-white/5 pb-10">
+                <div class="flex gap-3 mb-6">
+                    <span class="px-3 py-1 rounded-full bg-agtech-emerald/10 text-agtech-emerald text-sm font-semibold border border-agtech-emerald/20">Estudo de Caso</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm font-semibold border border-gray-700">Planejamento Ambiental</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                    Como identificar solo raso antes de suprimir vegetação: um método por sensoriamento remoto
+                </h1>
+                <div class="flex items-center gap-4 text-gray-400">
+                    <div class="w-10 h-10 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-agtech-emerald font-bold">AR</div>
+                    <div>
+                        <p class="font-semibold text-white">André Ricartes</p>
+                        <p class="text-sm">Especialista em Geointeligência Rural</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prose max-w-none">
+                <h2>Introdução: O Desafio do Planejamento Espacial no Campo</h2>
+                <p>
+                    Se você é proprietário rural ou responsável técnico por uma propriedade com o Cadastro Ambiental Rural (CAR) regularizado e em plena conformidade, provavelmente já se deparou com a seguinte questão estratégica: após obter a Autorização de Supressão Vegetal (ASV) para uma área legalmente elegível, <strong>por onde começar a execução do manejo?</strong>
+                </p>
+                <p>
+                    A resposta para essa pergunta não deveria ser intuitiva, como iniciar "pela área mais próxima da sede" ou "pelo talhão de mais fácil acesso para as máquinas". O manejo sustentável e economicamente viável exige critérios técnicos rigorosos. No planejamento moderno, existe uma variável física crucial que reduz drasticamente o risco operacional antes mesmo que qualquer trator ou maquinário pesado entre no talhão: <strong>saber exatamente onde o solo é mais raso.</strong>
+                </p>
+                <div class="tech-quote">
+                    <p class="mb-0 text-white font-medium">
+                        A profundidade efetiva do perfil do solo é o fator limitante mais negligenciado em projetos de abertura. Solos rasos — caracterizados por pouca profundidade até a rocha matriz ou saprolito — apresentam altíssima vulnerabilidade física, tornando-se a principal causa de erosão acelerada, compactação severa e baixo retorno produtivo a médio prazo.
+                    </p>
+                </div>
+                <p>
+                    Suprimir a vegetação nativa em uma área onde o perfil de solo é estruturalmente raso, sem esse diagnóstico prévio, é assumir passivos ambientais e financeiros graves. A perda da cobertura vegetal protetora expõe solos rasos ao impacto direto das chuvas, iniciando processos erosivos laminares que evoluem rapidamente para ravinas ou voçorocas de difícil controle.
+                </p>
+
+                <h2>1. O Problema Espectral: Solo Raso Não Aparece "A Olho Nu" em Imagens de Satélite</h2>
+                <p>
+                    Diferente de eventos visivelmente explícitos em sensores orbitais, como cicatrizes de incêndios florestais, desmatamentos recentes ou a dinâmica de corpos d'água, a profundidade efetiva de um solo não pode ser fotografada diretamente por satélites. A radiação eletromagnética captada pelos sensores ópticos passivos interage apenas com a superfície da terra ou com o dossel da vegetação. Não existe uma banda espectral mágica capaz de atravessar metros de terra e retornar a espessura do horizonte pedológico.
+                </p>
+                <p>
+                    Para superar essa barreira física, a <strong class="text-agtech-emerald">geointeligência para supressão vegetal</strong> utiliza técnicas de modelagem preditiva e fusão de dados geoespaciais. Em vez de buscar uma medição direta, interpretamos indicadores biofísicos e topográficos indiretos (proxies espectrais) que, integrados de maneira estatisticamente consistente, revelam os padrões limitantes da profundidade do solo com elevado grau de acurácia.
+                </p>
+                <p>
+                    Esse processo envolve converter indícios fracos e isolados — como a variação de vigor de uma planta durante a seca ou a curvatura de uma encosta — em um score ponderado de prioridade robusto. Esse indicador torna-se a base científica indispensável para orientar a tomada de decisão no <strong class="text-gray-200">planejamento ambiental propriedade rural</strong>.
+                </p>
+
+                <h2>2. O Método: Três Evidências Integradas para um Único Score de Prioridade</h2>
+                <p>
+                    Em um estudo de caso recente que desenvolvemos para uma propriedade rural de médio-grande porte no Centro-Oeste brasileiro, implementamos um modelo analítico de score de prioridade de solo raso. O método consistiu na espacialização de três camadas de evidências geoespaciais independentes e complementares:
+                </p>
+
+                <h3>Evidência 1: Análise Pedológica Digital via Grids Globais</h3>
+                <p>
+                    Utilizamos bases de dados geoespaciais pedológicas globais (como o <strong>SoilGrids</strong>, desenvolvido pelo <em>International Soil Reference and Information Centre - ISRIC</em>) calibradas com dados locais. Por meio da <strong class="text-agtech-emerald">análise de solo por satélite</strong> e modelagem estatística, extraímos indicadores associados a perfis rasos (como Neossolos Litólicos ou Cambissolos rasos):
+                </p>
+                <ul>
+                    <li><strong>Volume de fragmentos grossos (cascalho) em profundidade:</strong> Perfis rasos apresentam alta concentração de fragmentos rochosos logo nas primeiras camadas de solo.</li>
+                    <li><strong>Densidade aparente do solo (Bulk Density):</strong> Solos com menor profundidade útil tendem a apresentar maior compactação natural nas proximidades da rocha.</li>
+                    <li><strong>Estoque de carbono orgânico:</strong> A restrição ao desenvolvimento radicular limita o acúmulo de matéria orgânica ao longo do perfil em comparação com solos profundos.</li>
+                </ul>
+
+                <h3>Evidência 2: Geomorfometria e Dinâmica do Relevo (Modelos Digitais de Elevação)</h3>
+                <p>
+                    O relevo determina a velocidade e a direção do fluxo de água, governando os processos históricos de erosão e sedimentação. A partir de Modelos Digitais de Elevação (MDE) de alta resolução, processamos atributos topográficos essenciais:
+                </p>
+                <p>
+                    A declividade (slope) e a curvatura do terreno indicam onde o processo erosivo removeu o solo ao longo de milhares de anos. Encostas convexas e com alta declividade tendem a perder material mais rapidamente do que a taxa de intemperismo das rochas, gerando perfis de solo rasos e vulneráveis. Por outro lado, fundos de vale e encostas côncavas atuam como zonas de deposição (coluvionamento), acumulando solos profundos e ricos em nutrientes.
+                </p>
+
+                <h3>Evidência 3: Persistência do Estresse Hídrico por Índices Biofísicos (NDVI e NDMI)</h3>
+                <p>
+                    A própria vegetação funciona como um sensor biológico altamente sensível às condições físicas do solo. Solos rasos possuem baixa Capacidade de Água Disponível (CAD). Quando a estação seca atinge a região, as plantas localizadas sobre solos pouco profundos não conseguem aprofundar suas raízes até os lençóis freáticos ou zonas úmidas profundas, entrando em estresse hídrico muito antes da vegetação estabelecida em solos profundos.
+                </p>
+                <p>
+                    Para mapear essa resposta biológica, analisamos uma série histórica temporal de 6 anos consecutivos durante o pico da seca, cruzando dois índices espectrais calculados a partir de imagens da constelação Sentinel-2:
+                </p>
+                <ul>
+                    <li><strong>NDVI (Índice de Vegetação por Diferença Normalizada):</strong> Mapeia a atividade fotossintética e a densidade da biomassa foliar.</li>
+                    <li><strong>NDMI (Índice de Diferença Normalizada de Umidade):</strong> Detecta o teor de água no dossel da vegetação, sendo altamente correlacionado com o estresse hídrico vegetal preliminar.</li>
+                </ul>
+                <p>
+                    A recorrência plurianual desse estresse hídrico da vegetação (o indicador <strong class="text-agtech-emerald">NDVI NDMI solo</strong>) isola anomalias sazonais pontuais (como queimadas ou pragas) e expõe a limitação física estrutural do solo raso subjacente. Processamos essa série histórica densa utilizando ferramentas eficientes como DuckDB e Python para extrair os pixels que sistematicamente apresentavam perda severa de vigor na estiagem.
+                </p>
+
+                <div class="tech-quote">
+                    <p class="mb-0 text-white font-medium">
+                        Ao integrar o comportamento da vegetação e o relevo, analisamos a assinatura temporal do terreno. Esse comportamento consistente da vegetação ao longo das safras reflete a sua dependência direta da física do solo, caracterizando a <strong class="text-agtech-emerald">Inércia Produtiva</strong> que utilizamos para validar a estabilidade das áreas antes de qualquer intervenção.
+                    </p>
+                </div>
+
+                <h2>3. O Resultado: Um Score Ponderado para Priorização de Supressão Vegetal</h2>
+                <p>
+                    Cada uma dessas evidências, se analisada individualmente, apresenta limitações e pode induzir a falsos positivos. Uma área de relevo plano pode ter solo raso devido a uma camada de impedimento geológico (como laterita/canga); uma vegetação com baixo NDVI pode ser apenas reflexo de uma doença pontual.
+                </p>
+                <p>
+                    Contudo, ao fundir essas três camadas em um algoritmo de sobreposição ponderada, as evidências se reforçam mutuamente. O resultado é um mapa contínuo com um score de prioridade de solo raso variando de 0 a 100.
+                </p>
+                <p>
+                    Este produto final não representa um veredito binário inflexível do tipo "pode suprimir / não pode suprimir". Em vez disso, classifica a propriedade em faixas de atenção (baixa, moderada e alta prioridade de restrição):
+                </p>
+                <ul>
+                    <li><strong>Atenção Baixa (Zonas Verdes):</strong> Solos profundos, planos e com boa retenção de umidade. São as áreas prioritárias para o início da supressão vegetal, com menor risco erosivo e maior potencial de retorno produtivo.</li>
+                    <li><strong>Atenção Moderada (Zonas Amarelas):</strong> Indicadores inconclusivos ou relevo intermediário. Áreas reservadas para a segunda fase do manejo, requerendo amostragens pontuais em campo.</li>
+                    <li><strong>Atenção Alta (Zonas Vermelhas):</strong> Coincidência de relevo declivoso, solo pedregoso estimado e forte estresse hídrico persistente. Áreas onde a supressão deve ser evitada ou rigorosamente avaliada, pois o risco de degradação imediata do solo e perda de produtividade agrícola é extremo.</li>
+                </ul>
+
+                <h2>4. O Valor Prático da Consultoria Geoespacial Agro na Gestão de Riscos</h2>
+                <p>
+                    A incorporação dessa análise na rotina operacional traz impactos diretos na rentabilidade e segurança jurídica da gestão agropecuária:
+                </p>
+                <ol class="list-decimal pl-6 space-y-4 text-gray-400">
+                    <li class="text-lg"><strong class="text-white">Mitigação Drástica do Risco de Erosão:</strong> Evita a abertura de frentes de supressão em encostas vulneráveis, prevenindo o surgimento de sulcos erosivos severos que inviabilizam o uso de maquinário.</li>
+                    <li class="text-lg"><strong class="text-white">Otimização Financeira da Etapa de Campo:</strong> Reduz a necessidade de vistorias exaustivas por toda a extensão da propriedade. O responsável técnico direciona as equipes de tradagem e sondagem diretamente para os pontos classificados como atenção moderada e alta, economizando tempo e recursos de mobilização.</li>
+                    <li class="text-lg"><strong class="text-white">Segurança Jurídica e Relações Institucionais:</strong> O mapa de prioridade oferece uma justificativa técnica blindada perante órgãos fiscalizadores, bancos financiadores de crédito rural e seguradoras, demonstrando conformidade com as melhores práticas de conservação de solo e água.</li>
+                    <li class="text-lg"><strong class="text-white">Maximização do Retorno sobre o Investimento (ROI):</strong> Concentra os insumos agrícolas, fertilizantes e corretivos nas áreas de solos profundos, onde a resposta das culturas ao manejo agronômico é otimizada.</li>
+                </ol>
+
+                <h2>Conclusão: A Geointeligência Direcionando o Trabalho de Campo</h2>
+                <p>
+                    É imperativo destacar que nenhum modelo matemático ou imagem de satélite substitui a verdade de campo. O verdadeiro poder da <strong class="text-agtech-emerald">consultoria geoespacial agro</strong> não reside em eliminar a verificação <em>in loco</em>, mas sim em direcioná-la com inteligência de dados. Em vez de percorrer às cegas uma área de 1.500 hectares, a geointeligência aponta com precisão os 5% de pontos críticos que necessitam de uma sondagem física detalhada.
+                </p>
+                <p>
+                    Decidir a supressão vegetal baseando-se em achismos ou conveniência logística é um modelo de gestão obsoleto. O uso estratégico de dados biofísicos orbitais e geomorfometria eleva a segurança das operações florestais e agrícolas a um patamar de precisão científica.
+                </p>
+            </div>
+        </article>
+
+        <!-- Contextual CTA Area -->
+        <div class="mt-20 glass-panel p-10 md:p-14 rounded-[2.5rem] border border-agtech-emerald/30 text-center relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-br from-agtech-emerald/5 to-[#000] z-0"></div>
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-agtech-emerald to-transparent"></div>
+            
+            <div class="relative z-10">
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Precisa de um diagnóstico técnico de solo e relevo para a sua propriedade?</h3>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Desenvolvo pipelines de geointeligência sob medida — cruzando dados de solo (SoilGrids), relevo (MDE) e comportamento da vegetação por satélite — para apoiar decisões de manejo, supressão vegetal e planejamento ambiental.
+                </p>
+                <a href="../../../#expertise" class="inline-flex items-center gap-3 px-8 py-4 bg-agtech-emerald hover:bg-agtech-emeraldHover text-white text-lg font-bold rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.25)]">
+                    Conheça nossa Consultoria em Geointeligência Rural
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Perguntas Frequentes Section -->
+        <section class="mt-20 border-t border-white/5 pt-16">
+            <h2 class="text-3xl font-bold text-white mb-10 text-center">Perguntas Frequentes</h2>
+            <div class="space-y-8 max-w-3xl mx-auto">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-2">O que é solo raso e por que ele é um problema para a supressão vegetal?</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Solo raso é aquele que apresenta pouca profundidade efetiva útil até atingir a rocha matriz ou material alterado (saprolito), geralmente inferior a 50 centímetros. A remoção da vegetação nativa nesses locais expõe um solo com baixíssima capacidade de retenção hídrica e alta suscetibilidade a processos erosivos graves, o que inviabiliza o cultivo agrícola rentável e causa rápida degradação ambiental.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-2">É possível determinar a profundidade exata do solo usando apenas imagens de satélite?</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Não. Sensoriamento remoto óptico passivo não mede profundidade diretamente. Nós usamos a modelagem espacial de proxies indiretos (como o estresse hídrico persistente da vegetação na seca detectado pelo NDVI/NDMI e a dinâmica do relevo) para obter a probabilidade espacial e indicar áreas críticas para investigação de campo direcionada.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-2">Esse tipo de diagnóstico substitui o levantamento de solos tradicional em campo?</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        De forma alguma. Ele complementa e otimiza o trabalho. Ao mapear previamente a propriedade e indicar as faixas de atenção (baixa, moderada e alta), o método permite que o proprietário ou engenheiro realize coletas com trados ou trincheiras focadas exatamente nos locais com maior incerteza ou risco pedológico, economizando até 80% do tempo de campo.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-2">Qual o tempo necessário para gerar um diagnóstico como esse para uma propriedade?</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        O processo de extração e fusão de dados costuma levar poucos dias, variando de acordo com a extensão total da propriedade e a cobertura de nuvens histórica nas imagens de satélite do período seco analisado. É consideravelmente mais ágil e econômico do que iniciar um levantamento de campo geral sem mapas de prioridade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/10 bg-[#050505] py-12 px-6">
+        <div class="container mx-auto text-center">
+            <div class="text-xl font-bold tracking-tighter text-white mb-4">
+                André<span class="text-agtech-emerald">Ricartes</span>
+            </div>
+            <p class="text-gray-500 text-sm font-medium">
+                &copy; 2026 André Ricartes. Todos os direitos reservados. Inteligência Geográfica.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
