@@ -66,11 +66,18 @@
             <a href="../" class="text-2xl font-extrabold tracking-tighter text-white">
                 André<span class="text-agtech-emerald">Ricartes</span>
             </a>
-            <nav class="hidden md:flex gap-8">
+            <nav class="hidden md:flex items-center gap-8">
                 <a href="../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Início</a>
                 <a href="#servicos" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Serviços</a>
                 <a href="analises/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Estudos de Caso e Análises</a>
                 <a href="#contato" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Contato</a>
+                
+                <!-- Language Switcher -->
+                <div class="flex items-center bg-agtech-gray/60 border border-gray-700/80 rounded-full px-2.5 py-1 text-xs font-semibold ml-2 shadow-inner">
+                    <span class="text-agtech-emerald font-bold">PT</span>
+                    <span class="text-gray-500 mx-1.5">|</span>
+                    <a href="../en/" class="text-gray-400 hover:text-white transition-colors" title="Switch to English version">EN</a>
+                </div>
             </nav>
             <!-- Botão Menu Hamburguer (Mobile) -->
             <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
@@ -88,6 +95,11 @@
             <a href="#servicos" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Serviços</a>
             <a href="analises/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Estudos de Caso e Análises</a>
             <a href="#contato" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Contato</a>
+            <div class="pt-3 border-t border-gray-800/80 flex items-center gap-2">
+                <span class="text-xs text-gray-400">Idioma:</span>
+                <span class="px-2.5 py-1 rounded-full bg-agtech-emerald/20 text-agtech-emerald text-xs font-bold border border-agtech-emerald/30">PT</span>
+                <a href="../en/" class="px-2.5 py-1 rounded-full bg-gray-800/80 hover:bg-gray-700 text-gray-300 text-xs font-semibold transition-colors">EN</a>
+            </div>
         </div>
     </header>
 
