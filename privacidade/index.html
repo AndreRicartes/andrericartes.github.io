@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://www.andrericartes.com/privacidade/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade — AR GPS Status | A.R. Geointeligência</title>
+    <meta name="description" content="Política de Privacidade oficial do aplicativo AR GPS Status e da A.R. Geointeligência e Automação Inova Simples (I.S.). Conformidade com LGPD e diretrizes do Google Play Console.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.andrericartes.com/privacidade/">
+    <meta property="og:title" content="Política de Privacidade — AR GPS Status | A.R. Geointeligência">
+    <meta property="og:description" content="Política de Privacidade oficial do AR GPS Status. Transparência total sobre permissões de localização precisa, câmera AR e sensores em conformidade com a LGPD.">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        agtech: {
+                            black: '#0a0a0a',
+                            dark: '#141414',
+                            card: '#1a1a1a',
+                            gray: '#262626',
+                            emerald: '#10b981',
+                            emeraldHover: '#059669',
+                            emeraldDark: '#064e3b',
+                            light: '#e5e7eb',
+                            muted: '#9ca3af'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        .glass-panel {
+            background: rgba(23, 23, 23, 0.7);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.25s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.1);
+        }
+        .code-badge {
+            font-family: 'JetBrains Mono', monospace;
+            background: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.375rem;
+            font-size: 0.825rem;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-agtech-emerald selection:text-white">
+
+    <!-- Decorações de Fundo (Background effects) -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute -top-[10%] -right-[10%] w-[550px] h-[550px] bg-agtech-emerald rounded-full mix-blend-screen filter blur-[160px] opacity-[0.12] animate-float"></div>
+        <div class="absolute top-[40%] -left-[10%] w-[450px] h-[450px] bg-agtech-emerald rounded-full mix-blend-screen filter blur-[160px] opacity-[0.08] animate-float" style="animation-delay: 3s;"></div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="fixed w-full top-0 z-50 glass-panel border-b border-white/5 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../" class="text-2xl font-extrabold tracking-tighter text-white group flex items-center gap-2" id="brand-logo-link">
+                <span>André<span class="text-agtech-emerald">Ricartes</span></span>
+                <span class="text-xs font-mono uppercase tracking-wider text-agtech-muted border border-white/10 px-2 py-0.5 rounded-full ml-1">Legal</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300" id="nav-home-link">Início</a>
+                <a href="../geointeligencia/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300" id="nav-geointeligencia-link">Geointeligência</a>
+                <a href="../geointeligencia/analises/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300" id="nav-analises-link">Análises</a>
+                <a href="#contato" class="text-sm font-semibold px-4 py-2 rounded-xl bg-agtech-emerald/10 border border-agtech-emerald/30 text-agtech-emerald hover:bg-agtech-emerald hover:text-white transition-all duration-300" id="nav-contato-btn">DPO / Contato</a>
+            </nav>
+            <!-- Botão Menu Hamburguer (Mobile) -->
+            <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none" aria-label="Abrir menu" aria-expanded="false">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-[#0a0a0af0] backdrop-blur-xl px-6 py-4 flex flex-col gap-4">
+            <a href="../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors">Início</a>
+            <a href="../geointeligencia/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors">Geointeligência</a>
+            <a href="../geointeligencia/analises/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors">Análises</a>
+            <a href="#contato" class="text-sm font-semibold text-agtech-emerald">DPO / Contato</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6 max-w-5xl">
+
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-xs text-gray-400 mb-8 font-medium">
+                <a href="../" class="hover:text-agtech-emerald transition-colors">Início</a>
+                <span class="text-gray-600">/</span>
+                <span class="text-gray-400">Institucional</span>
+                <span class="text-gray-600">/</span>
+                <span class="text-agtech-emerald font-semibold">Política de Privacidade</span>
+            </nav>
+
+            <!-- Hero Header -->
+            <section class="mb-14">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-agtech-emerald/10 border border-agtech-emerald/30 text-agtech-emerald text-xs font-semibold uppercase tracking-wider mb-5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    Conformidade LGPD &amp; Google Play Console
+                </div>
+                
+                <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+                    Política de Privacidade <span class="text-agtech-emerald block sm:inline">— AR GPS Status</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-3xl mb-6">
+                    Diretrizes de transparência, tratamento de dados técnicos e segurança da informação aplicáveis ao aplicativo móvel <strong>AR GPS Status</strong> e aos serviços da <strong>A.R. GEOINTELIGENCIA E AUTOMACAO INOVA SIMPLES (I.S.)</strong>.
+                </p>
+
+                <!-- Status Metadata Bar -->
+                <div class="glass-panel rounded-2xl p-4 md:p-5 flex flex-wrap items-center justify-between gap-4 border border-white/5 text-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 rounded-full bg-agtech-emerald animate-pulse"></div>
+                        <span class="text-gray-400">Última atualização:</span>
+                        <strong class="text-white font-medium">23 de outubro de 2026</strong>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs font-mono text-gray-400">
+                        <span class="bg-black/40 border border-white/10 px-2.5 py-1 rounded-lg text-gray-300">CNPJ: 68.449.367/0001-20</span>
+                        <span class="bg-black/40 border border-white/10 px-2.5 py-1 rounded-lg text-agtech-emerald">LGPD Art. 18</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards Resumo de Princípios -->
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16" aria-label="Destaques de Privacidade">
+                <div class="glass-card rounded-2xl p-5 border border-white/5">
+                    <div class="w-10 h-10 rounded-xl bg-agtech-emerald/10 border border-agtech-emerald/20 flex items-center justify-center text-agtech-emerald mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">Coleta Mínima</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Tratamos estritamente o necessário para diagnósticos GNSS de campo. Sem dados desnecessários.</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-5 border border-white/5">
+                    <div class="w-10 h-10 rounded-xl bg-agtech-emerald/10 border border-agtech-emerald/20 flex items-center justify-center text-agtech-emerald mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">Zero Publicidade</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Sem anúncios de terceiros, sem SDKs de rastreamento de perfil e sem comercialização de dados.</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-5 border border-white/5">
+                    <div class="w-10 h-10 rounded-xl bg-agtech-emerald/10 border border-agtech-emerald/20 flex items-center justify-center text-agtech-emerald mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">Armazenamento Local</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Suas coordenadas e logs ficam salvos exclusivamente na memória do seu próprio dispositivo.</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-5 border border-white/5">
+                    <div class="w-10 h-10 rounded-xl bg-agtech-emerald/10 border border-agtech-emerald/20 flex items-center justify-center text-agtech-emerald mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">Câmera em RAM</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">O feed de Realidade Aumentada (Sky View) é efêmero, processado em memória e nunca gravado.</p>
+                </div>
+            </section>
+
+            <!-- Documento Completo da Política -->
+            <div class="space-y-12">
+
+                <!-- 1. Identificação do Controlador -->
+                <section id="controlador" class="glass-card rounded-3xl p-8 md:p-10 border border-white/5 relative overflow-hidden">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-agtech-emerald/15 text-agtech-emerald font-bold text-sm border border-agtech-emerald/30">1</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Identificação do Controlador</h2>
+                    </div>
+
+                    <p class="text-gray-300 leading-relaxed mb-6 font-light">
+                        Esta Política de Privacidade aplica-se ao aplicativo móvel <strong>AR GPS Status</strong> e aos serviços correlatos prestados pela empresa controladora:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-black/40 border border-white/5 rounded-2xl p-6">
+                        <div class="space-y-1">
+                            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Razão Social</span>
+                            <p class="text-white font-medium">A.R. GEOINTELIGENCIA E AUTOMACAO INOVA SIMPLES (I.S.)</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">CNPJ</span>
+                            <p class="text-agtech-emerald font-mono font-medium">68.449.367/0001-20</p>
+                        </div>
+                        <div class="space-y-1 md:col-span-2">
+                            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Sede Operacional</span>
+                            <p class="text-gray-300">Rua Coronel Joaquim José de Lima, nº 260, Centro, Bebedouro/SP — CEP 14700-450</p>
+                        </div>
+                        <div class="space-y-1 md:col-span-2 pt-2 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Canal de Privacidade e Contato (DPO / Encarregado)</span>
+                                <p class="text-white font-mono text-sm">privacidade@andrericartes.com</p>
+                            </div>
+                            <a href="mailto:privacidade@andrericartes.com" class="inline-flex items-center gap-2 text-xs font-semibold text-agtech-emerald hover:text-white transition-colors">
+                                Enviar mensagem ao DPO &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Princípio da Coleta Mínima e Finalidade -->
+                <section id="coleta-minima" class="glass-card rounded-3xl p-8 md:p-10 border border-white/5">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-agtech-emerald/15 text-agtech-emerald font-bold text-sm border border-agtech-emerald/30">2</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Princípio da Coleta Mínima e Finalidade</h2>
+                    </div>
+
+                    <div class="prose max-w-none text-gray-300 space-y-4 font-light leading-relaxed">
+                        <p>
+                            O <strong>AR GPS Status</strong> é uma ferramenta técnica de diagnóstico, telemetria GNSS e apoio a levantamentos geoespaciais e agrimensura.
+                        </p>
+                        <p>
+                            O aplicativo opera sob o <strong>princípio da coleta mínima de dados</strong> (LGPD, Art. 6º, III), tratando estritamente as informações necessárias para o funcionamento seguro e eficiente de suas ferramentas técnicas de campo. Não há coleta de dados para enriquecimento cadastral, construção de personas ou rastreamento de hábitos do usuário.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 3. Permissões Sensíveis e Tratamento de Dados -->
+                <section id="permissoes-sensiveis" class="glass-card rounded-3xl p-8 md:p-10 border border-white/5">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-agtech-emerald/15 text-agtech-emerald font-bold text-sm border border-agtech-emerald/30">3</span>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Permissões Sensíveis e Tratamento de Dados</h2>
+                            <p class="text-xs text-agtech-muted mt-1">Declaração técnica exigida pelas Diretivas de Dados do Usuário do Google Play Console e LGPD</p>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 leading-relaxed mb-8 font-light">
+                        Para entregar diagnósticos de satélites e cálculo de coordenadas de precisão, o aplicativo solicita autorizações específicas de hardware e sistema operacional. Abaixo detalhamos a justificativa técnica e o ciclo de vida dos dados para cada permissão:
+                    </p>
+
+                    <div class="space-y-6">
+
+                        <!-- Item A: Localização -->
+                        <div class="bg-black/40 border border-white/5 rounded-2xl p-6 hover:border-agtech-emerald/30 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-agtech-emerald/10 border border-agtech-emerald/30 flex items-center justify-center text-agtech-emerald">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white">A. Localização Geográfica Precisa</h3>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="code-badge">ACCESS_FINE_LOCATION</span>
+                                    <span class="code-badge">ACCESS_COARSE_LOCATION</span>
+                                </div>
+                            </div>
+                            
+                            <ul class="space-y-3 text-sm text-gray-300 font-light leading-relaxed">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-agtech-emerald font-bold">•</span>
+                                    <span><strong class="text-white font-medium">Finalidade Técnica:</strong> Acessar o hardware GNSS do dispositivo para computar métricas geodésicas em tempo real (latitude, longitude, altitude elipsoidal e ortométrica, velocidade, azimute), calcular diluição de precisão (PDOP, HDOP, VDOP) e telemetria de satélites ativos das constelações GPS (EUA), GLONASS (Rússia), Galileo (União Europeia), BeiDou (China) e QZSS (Japão).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-agtech-emerald font-bold">•</span>
+                                    <span><strong class="text-white font-medium">Armazenamento:</strong> As coordenadas obtidas permanecem estritamente no dispositivo do usuário. O aplicativo não monitora nem transmite sua localização em segundo plano para servidores remotos para fins comerciais ou publicitários.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-agtech-emerald font-bold">•</span>
+                                    <span><strong class="text-white font-medium">Projeção Cartográfica:</strong> Utilizada para conversão instantânea de coordenadas para o sistema geodésico oficial brasileiro <strong>SIRGAS 2000</strong> (coordenadas geográficas e projeção Universal Transversa de Mercator - UTM).</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Item B: Câmera -->
+                        <div class="bg-black/40 border border-white/5 rounded-2xl p-6 hover:border-agtech-emerald/30 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-agtech-emerald/10 border border-agtech-emerald/30 flex items-center justify-center text-agtech-emerald">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white">B. Câmera</h3>
+                                </div>
+                                <span class="code-badge">CAMERA</span>
+                            </div>
+                            
+                            <ul class="space-y-3 text-sm text-gray-300 font-light leading-relaxed">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-agtech-emerald font-bold">•</span>
+                                    <span><strong class="text-white font-medium">Finalidade Técnica:</strong> Utilizada exclusivamente para a funcionalidade de Realidade Aumentada (<em>Sky View</em>), permitindo sobrepor em tempo real as órbitas e posições dos satélites visíveis sobre a abóbada celeste capturada pela lente do dispositivo.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-agtech-emerald font-bold">•</span>
+                                    <span><strong class="text-white font-medium">Privacidade do Fluxo de Vídeo:</strong> O feed da câmera é processado estritamente em tempo de execução na memória RAM e descartado instantaneamente quadro a quadro. O aplicativo <strong>não grava vídeos, não realiza reconhecimento facial e não envia imagens</strong> de satélite ou do ambiente para servidores externos no uso padrão da ferramenta.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Item C: Sensores -->
+                        <div class="bg-black/40 border border-white/5 rounded-2xl p-6 hover:border-agtech-emerald/30 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-agtech-emerald/10 border border-agtech-emerald/30 flex items-center justify-center text-agtech-emerald">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white">C. Sensores de Movimento e Orientação</h3>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="code-badge">Magnetômetro</span>
+                                    <span class="code-badge">Giroscópio</span>
+                                    <span class="code-badge">Acelerômetro</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">
+                                <strong class="text-white font-medium">Finalidade Técnica:</strong> Calcular o vetor de atitude e orientação do aparelho (azimute magnético e azimute verdadeiro com declinação magnética calculada), garantindo o alinhamento rigoroso dos satélites no modo de Realidade Aumentada e na bússola topográfica digital.
+                            </p>
+                        </div>
+
+                        <!-- Item D: Conexões de Proximidade / Bluetooth -->
+                        <div class="bg-black/40 border border-white/5 rounded-2xl p-6 hover:border-agtech-emerald/30 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-agtech-emerald/10 border border-agtech-emerald/30 flex items-center justify-center text-agtech-emerald">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.343 6.343c5.857-5.857 15.355-5.857 21.213 0"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white">D. Conexões de Proximidade e Bluetooth</h3>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="code-badge">BLUETOOTH_CONNECT</span>
+                                    <span class="code-badge">BLUETOOTH_SCAN</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">
+                                <strong class="text-white font-medium">Finalidade Técnica:</strong> Permitir o pareamento opcional e comunicação serial com receptores GNSS/RTK externos via Bluetooth (exemplo: estações de alta precisão baseadas em chips u-blox ZED-F9P com microcontroladores ESP32) para recepção direta de fluxos de correção diferencial e telemetria em sentenças NMEA externas.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- 4. Não Compartilhamento e Ausência de Rastreamento Publicitário -->
+                <section id="nao-compartilhamento" class="glass-card rounded-3xl p-8 md:p-10 border border-white/5">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-agtech-emerald/15 text-agtech-emerald font-bold text-sm border border-agtech-emerald/30">4</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Não Compartilhamento e Ausência de Rastreamento Publicitário</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300 font-light leading-relaxed">
+                        <div class="p-6 bg-black/40 border border-white/5 rounded-2xl">
+                            <h3 class="text-white font-bold text-base mb-2 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-agtech-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Sem Publicidade de Terceiros
+                            </h3>
+                            <p class="text-sm text-gray-400">
+                                O aplicativo não contém anúncios publicitários (ex: Google AdMob ou redes de mídia programática) e não integra SDKs de rastreamento de perfil de consumo, telemetria comportamental ou monetização de navegação.
+                            </p>
+                        </div>
+
+                        <div class="p-6 bg-black/40 border border-white/5 rounded-2xl">
+                            <h3 class="text-white font-bold text-base mb-2 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-agtech-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 004 11a8 8 0 00.99 7.132"></path>
+                                </svg>
+                                Não Comercialização
+                            </h3>
+                            <p class="text-sm text-gray-400">
+                                Os dados geográficos, arquivos de pontos e medições gerados pelo usuário pertencem exclusivamente a ele e nunca serão vendidos, alugados, cedidos ou compartilhados com terceiros sob qualquer pretexto.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Armazenamento, Exportação e Exclusão de Dados -->
+                <section id="armazenamento-exclusao" class="glass-card rounded-3xl p-8 md:p-10 border border-white/5">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-agtech-emerald/15 text-agtech-emerald font-bold text-sm border border-agtech-emerald/30">5</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Armazenamento, Exportação e Exclusão de Dados</h2>
+                    </div>
+
+                    <div class="space-y-4 text-gray-300 font-light leading-relaxed">
+                        <p>
+                            <strong class="text-white font-medium">Armazenamento Local:</strong> Registros de pontos topográficos, logs de diagnóstico ou arquivos exportados (formatos CSV, TXT, KML ou GeoJSON) são salvos exclusivamente no armazenamento interno do aparelho ou em pasta explicitamente designada pelo usuário através do seletor de arquivos do sistema.
+                        </p>
+                        <p>
+                            <strong class="text-white font-medium">Exclusão de Dados:</strong> O usuário tem autonomia total para, a qualquer momento, excluir pontos e logs salvos diretamente na interface do app ou limpando os dados de armazenamento do aplicativo nas configurações do sistema operacional Android.
+                        </p>
+                        <div class="p-4 bg-agtech-emerald/5 border border-agtech-emerald/20 rounded-xl text-sm text-gray-300">
+                            <span class="text-agtech-emerald font-semibold">Nota de Privacidade:</span> Como não há conta de usuário em nuvem obrigatória para a operação da versão pública, a simples desinstalação do aplicativo remove integralmente todos os registros locais associados criados no diretório padrão do aplicativo.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. Direitos do Titular (LGPD — Art. 18) -->
+                <section id="direitos-titular" class="glass-card rounded-3xl p-8 md:p-10 border border-white/5">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-agtech-emerald/15 text-agtech-emerald font-bold text-sm border border-agtech-emerald/30">6</span>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Direitos do Titular</h2>
+                            <span class="text-xs font-mono text-agtech-emerald">Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — Art. 18)</span>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 leading-relaxed mb-6 font-light">
+                        Em rigorosa conformidade com o Artigo 18 da LGPD, garantimos a você a prerrogativa de exercer seus direitos a qualquer tempo mediante requisição:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-5 bg-black/40 border border-white/5 rounded-2xl flex flex-col justify-between">
+                            <div>
+                                <span class="text-agtech-emerald font-mono text-xs font-semibold">Art. 18, I &amp; II</span>
+                                <h3 class="text-white font-bold text-base mt-2 mb-2">Confirmação &amp; Acesso</h3>
+                                <p class="text-xs text-gray-400 leading-relaxed">Confirmação da existência de tratamento e acesso integral aos eventuais dados tratados.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 bg-black/40 border border-white/5 rounded-2xl flex flex-col justify-between">
+                            <div>
+                                <span class="text-agtech-emerald font-mono text-xs font-semibold">Art. 18, III &amp; VI</span>
+                                <h3 class="text-white font-bold text-base mt-2 mb-2">Correção &amp; Eliminação</h3>
+                                <p class="text-xs text-gray-400 leading-relaxed">Correção de dados incompletos ou solicitação de eliminação de dados tratados sob seu consentimento.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 bg-black/40 border border-white/5 rounded-2xl flex flex-col justify-between">
+                            <div>
+                                <span class="text-agtech-emerald font-mono text-xs font-semibold">Art. 18, IX</span>
+                                <h3 class="text-white font-bold text-base mt-2 mb-2">Revogação de Permissões</h3>
+                                <p class="text-xs text-gray-400 leading-relaxed">Revogação do consentimento das permissões de hardware (câmera, localização e Bluetooth) diretamente nas configurações do Android.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. Segurança da Informação -->
+                <section id="seguranca" class="glass-card rounded-3xl p-8 md:p-10 border border-white/5">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-agtech-emerald/15 text-agtech-emerald font-bold text-sm border border-agtech-emerald/30">7</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Segurança da Informação</h2>
+                    </div>
+
+                    <p class="text-gray-300 leading-relaxed font-light">
+                        Adotamos rigorosas boas práticas e controles técnicos de engenharia de software na compilação e distribuição do aplicativo:
+                    </p>
+
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="p-4 bg-black/40 border border-white/5 rounded-xl">
+                            <span class="text-xs text-agtech-emerald font-mono uppercase block mb-1">Criptografia</span>
+                            <p class="text-sm text-gray-200 font-medium">Assinatura digital criptográfica do pacote APK/AAB</p>
+                        </div>
+                        <div class="p-4 bg-black/40 border border-white/5 rounded-xl">
+                            <span class="text-xs text-agtech-emerald font-mono uppercase block mb-1">APIs Oficiais</span>
+                            <p class="text-sm text-gray-200 font-medium">Uso exclusivo de bibliotecas oficiais AndroidX e CameraX</p>
+                        </div>
+                        <div class="p-4 bg-black/40 border border-white/5 rounded-xl">
+                            <span class="text-xs text-agtech-emerald font-mono uppercase block mb-1">Tráfego Seguro</span>
+                            <p class="text-sm text-gray-200 font-medium">Sem tráfego inseguro em texto claro (Cleartext Traffic bloqueado)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 8. Alterações nesta Política -->
+                <section id="alteracoes" class="glass-card rounded-3xl p-8 md:p-10 border border-white/5">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-agtech-emerald/15 text-agtech-emerald font-bold text-sm border border-agtech-emerald/30">8</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Alterações nesta Política</h2>
+                    </div>
+
+                    <p class="text-gray-300 leading-relaxed font-light">
+                        Esta Política de Privacidade poderá ser periodicamente atualizada para refletir novas funcionalidades do aplicativo ou alterações regulatórias no ecossistema Android e nas legislações de proteção de dados. Notificações sobre revisões significativas serão mantidas públicas nesta mesma página com a respectiva atualização da data no cabeçalho.
+                    </p>
+                </section>
+
+                <!-- 9. Canal de Atendimento (DPO / Contato) -->
+                <section id="contato" class="glass-panel rounded-3xl p-8 md:p-12 border border-agtech-emerald/30 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-agtech-emerald text-black font-bold text-sm">9</span>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Canal de Atendimento</h2>
+                        </div>
+
+                        <p class="text-gray-300 font-light leading-relaxed max-w-2xl mb-8">
+                            Para quaisquer dúvidas, esclarecimentos técnicos sobre os algoritmos GNSS ou solicitações referentes à privacidade e tratamento de dados deste aplicativo, contate nosso Encarregado pelo Tratamento de Dados Pessoais (DPO):
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="mailto:privacidade@andrericartes.com" class="inline-flex items-center justify-center gap-3 px-6 py-4 bg-agtech-emerald hover:bg-agtech-emeraldHover text-white font-bold rounded-2xl transition-all shadow-[0_0_25px_rgba(16,185,129,0.25)] hover:shadow-[0_0_35px_rgba(16,185,129,0.4)]">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>privacidade@andrericartes.com</span>
+                            </a>
+
+                            <a href="mailto:contato@andrericartes.com" class="inline-flex items-center justify-center gap-3 px-6 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-gray-200 hover:text-white font-semibold rounded-2xl transition-all">
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.206"></path>
+                                </svg>
+                                <span>contato@andrericartes.com</span>
+                            </a>
+
+                            <a href="https://www.andrericartes.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-gray-200 hover:text-white font-semibold rounded-2xl transition-all">
+                                <span>andrericartes.com</span>
+                                <svg class="w-4 h-4 text-agtech-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-[#050505] py-12 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-2xl font-bold tracking-tighter text-white">
+                André<span class="text-agtech-emerald">Ricartes</span>
+            </div>
+            
+            <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+                <a href="../" class="hover:text-white transition-colors">Início</a>
+                <span class="text-gray-700">•</span>
+                <a href="../geointeligencia/" class="hover:text-white transition-colors">Geointeligência</a>
+                <span class="text-gray-700">•</span>
+                <a href="https://www.andrericartes.com/privacidade/" class="text-agtech-emerald font-semibold">Política de Privacidade</a>
+            </div>
+
+            <p class="text-gray-500 text-xs text-center md:text-right font-medium">
+                &copy; <script>document.write(new Date().getFullYear())</script> A.R. GEOINTELIGENCIA E AUTOMACAO INOVA SIMPLES (I.S.)<br/>
+                CNPJ 68.449.367/0001-20
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
