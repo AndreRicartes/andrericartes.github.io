@@ -102,6 +102,10 @@
             background: #10b981;
         }
     </style>
+    <meta property="og:image" content="https://www.andrericartes.com/assets/og-default.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body class="antialiased selection:bg-agtech-emerald selection:text-white">
 
@@ -178,7 +182,7 @@
                     <div class="flex items-center gap-3">
                         <div class="w-2.5 h-2.5 rounded-full bg-agtech-emerald animate-pulse"></div>
                         <span class="text-gray-400">Última atualização:</span>
-                        <strong class="text-white font-medium">23 de outubro de 2026</strong>
+                        <strong class="text-white font-medium">4 de novembro de 2026</strong>
                     </div>
                     <div class="flex items-center gap-2 text-xs font-mono text-gray-400">
                         <span class="bg-black/40 border border-white/10 px-2.5 py-1 rounded-lg text-gray-300">CNPJ: 68.449.367/0001-20</span>
@@ -324,15 +328,11 @@
                             <ul class="space-y-3 text-sm text-gray-300 font-light leading-relaxed">
                                 <li class="flex items-start gap-2">
                                     <span class="text-agtech-emerald font-bold">•</span>
-                                    <span><strong class="text-white font-medium">Finalidade Técnica:</strong> Acessar o hardware GNSS do dispositivo para computar métricas geodésicas em tempo real (latitude, longitude, altitude elipsoidal e ortométrica, velocidade, azimute), calcular diluição de precisão (PDOP, HDOP, VDOP) e telemetria de satélites ativos das constelações GPS (EUA), GLONASS (Rússia), Galileo (União Europeia), BeiDou (China) e QZSS (Japão).</span>
+                                    <span><strong class="text-white font-medium">Finalidade Técnica:</strong> Acessar o hardware GNSS do dispositivo para exibir em tempo real a posição (latitude, longitude, altitude, velocidade, azimute), a acurácia estimada e a telemetria de satélites ativos das constelações GPS (EUA), GLONASS (Rússia), Galileo (União Europeia), BeiDou (China) e QZSS (Japão).</span>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-agtech-emerald font-bold">•</span>
                                     <span><strong class="text-white font-medium">Armazenamento:</strong> As coordenadas obtidas permanecem estritamente no dispositivo do usuário. O aplicativo não monitora nem transmite sua localização em segundo plano para servidores remotos para fins comerciais ou publicitários.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-agtech-emerald font-bold">•</span>
-                                    <span><strong class="text-white font-medium">Projeção Cartográfica:</strong> Utilizada para conversão instantânea de coordenadas para o sistema geodésico oficial brasileiro <strong>SIRGAS 2000</strong> (coordenadas geográficas e projeção Universal Transversa de Mercator - UTM).</span>
                                 </li>
                             </ul>
                         </div>
@@ -384,28 +384,6 @@
                             
                             <p class="text-sm text-gray-300 font-light leading-relaxed">
                                 <strong class="text-white font-medium">Finalidade Técnica:</strong> Calcular o vetor de atitude e orientação do aparelho (azimute magnético e azimute verdadeiro com declinação magnética calculada), garantindo o alinhamento rigoroso dos satélites no modo de Realidade Aumentada e na bússola topográfica digital.
-                            </p>
-                        </div>
-
-                        <!-- Item D: Conexões de Proximidade / Bluetooth -->
-                        <div class="bg-black/40 border border-white/5 rounded-2xl p-6 hover:border-agtech-emerald/30 transition-all">
-                            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-8 h-8 rounded-lg bg-agtech-emerald/10 border border-agtech-emerald/30 flex items-center justify-center text-agtech-emerald">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.343 6.343c5.857-5.857 15.355-5.857 21.213 0"></path>
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-white">D. Conexões de Proximidade e Bluetooth</h3>
-                                </div>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="code-badge">BLUETOOTH_CONNECT</span>
-                                    <span class="code-badge">BLUETOOTH_SCAN</span>
-                                </div>
-                            </div>
-                            
-                            <p class="text-sm text-gray-300 font-light leading-relaxed">
-                                <strong class="text-white font-medium">Finalidade Técnica:</strong> Permitir o pareamento opcional e comunicação serial com receptores GNSS/RTK externos via Bluetooth (exemplo: estações de alta precisão baseadas em chips u-blox ZED-F9P com microcontroladores ESP32) para recepção direta de fluxos de correção diferencial e telemetria em sentenças NMEA externas.
                             </p>
                         </div>
 
@@ -501,7 +479,7 @@
                             <div>
                                 <span class="text-agtech-emerald font-mono text-xs font-semibold">Art. 18, IX</span>
                                 <h3 class="text-white font-bold text-base mt-2 mb-2">Revogação de Permissões</h3>
-                                <p class="text-xs text-gray-400 leading-relaxed">Revogação do consentimento das permissões de hardware (câmera, localização e Bluetooth) diretamente nas configurações do Android.</p>
+                                <p class="text-xs text-gray-400 leading-relaxed">Revogação do consentimento das permissões de hardware (câmera e localização) diretamente nas configurações do Android.</p>
                             </div>
                         </div>
                     </div>
@@ -624,5 +602,11 @@
             closeIcon.classList.toggle('hidden');
         });
     </script>
+
+    <!-- WhatsApp flutuante -->
+    <a href="https://wa.me/5567996871410?text=Ol%C3%A1%20Andr%C3%A9%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20im%C3%B3vel%20rural." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" title="Falar no WhatsApp"
+       style="position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:9999px;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.35)">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4h.1c6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.3-6.2-3.5-8.3zM12 21.7a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 0 1-1.5-5.2C2.1 6.4 6.5 2 12 2c2.6 0 5.1 1 7 2.9a9.8 9.8 0 0 1 2.9 7c0 5.4-4.4 9.8-9.9 9.8zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.2c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5a9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+    </a>
 </body>
 </html>

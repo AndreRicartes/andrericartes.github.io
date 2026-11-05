@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://www.andrericartes.com/ar-cad/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR_CAD: CAD 2D para SIGEF e Mapa do ONR | André Ricartes</title>
+    <meta name="description" content="AR_CAD é um CAD 2D enxuto para agrimensura e regularização fundiária: lê e gera a planilha do SIGEF, gera o pacote do Mapa do ONR e trabalha com DXF. Em desenvolvimento, com beta gratuito.">
+    <meta property="og:title" content="AR_CAD: CAD 2D para SIGEF e Mapa do ONR" />
+    <meta property="og:description" content="Lê e gera a planilha do SIGEF, gera o pacote do Mapa do ONR e trabalha com DXF. Beta gratuito em breve." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.andrericartes.com/ar-cad/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="https://www.andrericartes.com/assets/og-default.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AR_CAD",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Windows, Linux",
+      "description": "CAD 2D para agrimensura e regularização fundiária: planilha do SIGEF, pacote do Mapa do ONR e DXF.",
+      "author": { "@type": "Person", "name": "André Ricartes", "url": "https://www.andrericartes.com/" },
+      "url": "https://www.andrericartes.com/ar-cad/"
+    }
+    </script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        agtech: {
+                            black: '#0a0a0a',   /* Fundo principal escuro */
+                            dark: '#171717',    /* Fundo seções secundárias */
+                            gray: '#262626',    /* Bordas e painéis */
+                            emerald: '#10b981', /* Destaques verde esmeralda */
+                            emeraldHover: '#059669',
+                            light: '#e5e7eb'
+                        }
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        
+        /* Tema glassmorphism industrial */
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981; 
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-agtech-emerald selection:text-white">
+
+    <!-- Decorações de Fundo (Background effects) -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-agtech-emerald rounded-full mix-blend-screen filter blur-[150px] opacity-[0.15] animate-float"></div>
+        <div class="absolute top-[60%] -left-[10%] w-[400px] h-[400px] bg-agtech-emerald rounded-full mix-blend-screen filter blur-[150px] opacity-[0.1] animate-float" style="animation-delay: 3s;"></div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="fixed w-full top-0 z-50 glass-panel border-b border-white/5 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter text-white">
+                André<span class="text-agtech-emerald">Ricartes</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="../#sobre" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Sobre</a>
+                <a href="../#expertise" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Expertise</a>
+                <a href="../geointeligencia/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Geointeligência</a>
+                <a href="./" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">AR_CAD</a>
+                <a href="../#publicacoes" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Publicações</a>
+                <a href="../#contato" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Contato</a>
+                
+                <!-- Language Switcher -->
+                <div class="flex items-center bg-agtech-gray/60 border border-gray-700/80 rounded-full px-2.5 py-1 text-xs font-semibold ml-2 shadow-inner">
+                    <span class="text-agtech-emerald font-bold">PT</span>
+                    <span class="text-gray-500 mx-1.5">|</span>
+                    <a href="../en/" class="text-gray-400 hover:text-white transition-colors" title="Switch to English version">EN</a>
+                </div>
+            </nav>
+            <!-- Botão Menu Hamburguer (Mobile) -->
+            <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-[#0a0a0ab3] backdrop-blur-lg px-6 py-4 flex flex-col gap-4">
+            <a href="../#sobre" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Sobre</a>
+            <a href="../#expertise" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Expertise</a>
+            <a href="../geointeligencia/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Geointeligência</a>
+                <a href="./" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">AR_CAD</a>
+            <a href="../#publicacoes" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Publicações</a>
+            <a href="../#contato" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300">Contato</a>
+            <div class="pt-3 border-t border-gray-800/80 flex items-center gap-2">
+                <span class="text-xs text-gray-400">Idioma:</span>
+                <span class="px-2.5 py-1 rounded-full bg-agtech-emerald/20 text-agtech-emerald text-xs font-bold border border-agtech-emerald/30">PT</span>
+                <a href="../en/" class="px-2.5 py-1 rounded-full bg-gray-800/80 hover:bg-gray-700 text-gray-300 text-xs font-semibold transition-colors">EN</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="pt-32 pb-24 px-6">
+        <section class="container mx-auto max-w-5xl text-center mb-20">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-agtech-emerald/10 border border-agtech-emerald/20 text-agtech-emerald text-xs font-bold tracking-wider mb-8">EM DESENVOLVIMENTO • BETA GRATUITO EM BREVE</div>
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-8 text-white">AR_CAD</h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                Um CAD 2D enxuto para quem faz agrimensura e regularização fundiária: do desenho do perímetro à planilha do SIGEF e ao pacote do Mapa do ONR, sem pular de programa em programa.
+            </p>
+            <a href="https://wa.me/5567996871410?text=Ol%C3%A1%20Andr%C3%A9%2C%20quero%20testar%20o%20beta%20do%20AR_CAD." target="_blank" rel="noopener noreferrer" class="inline-flex px-8 py-4 bg-agtech-emerald hover:bg-agtech-emeraldHover text-white font-bold rounded-xl transition-all duration-300">Quero testar o beta</a>
+        </section>
+
+        <section class="container mx-auto max-w-6xl mb-20">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-10 text-center">O que ele faz hoje</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-panel p-8 rounded-[2rem] border border-gray-800 hover:border-agtech-emerald/40 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">Planilha do SIGEF</h3>
+                    <p class="text-gray-400 leading-relaxed">Lê a planilha oficial (.ods) e desenha o perímetro em UTM no fuso correto. Gera a planilha preenchida em sexagesimal a partir do desenho, com pré-validação de tolerâncias M, P e V.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-[2rem] border border-gray-800 hover:border-agtech-emerald/40 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">Pacote do Mapa do ONR</h3>
+                    <p class="text-gray-400 leading-relaxed">Gera o .zip com o shapefile e os atributos registrais do Mapa do ONR (SIG-RI), em SIRGAS 2000, a partir do polígono desenhado.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-[2rem] border border-gray-800 hover:border-agtech-emerald/40 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">DXF</h3>
+                    <p class="text-gray-400 leading-relaxed">Importa e exporta DXF R2000, para trocar arquivos com AutoCAD, TopoGRAPH e QGIS.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-[2rem] border border-gray-800 hover:border-agtech-emerald/40 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">Parcelas certificadas do INCRA</h3>
+                    <p class="text-gray-400 leading-relaxed">Busca parcelas certificadas por código, SNCR, matrícula ou nome e traz os confrontantes para o desenho, com snap nos vértices.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-[2rem] border border-gray-800 hover:border-agtech-emerald/40 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">CAR e Reserva Legal</h3>
+                    <p class="text-gray-400 leading-relaxed">Balanço de Reserva Legal e APP e geração do pacote shapefile para o SICAR.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-[2rem] border border-gray-800 hover:border-agtech-emerald/40 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">Leve e direto</h3>
+                    <p class="text-gray-400 leading-relaxed">Tela preta, mira em cruz e comandos curtos digitados. Roda em Windows e Linux, sem depender de um SIG completo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto max-w-4xl">
+            <div class="glass-panel p-8 md:p-12 rounded-[2rem] border border-gray-800">
+                <h2 class="text-2xl font-bold text-white mb-4">Situação do projeto</h2>
+                <ul class="space-y-3 text-gray-400 leading-relaxed list-disc pl-5">
+                    <li>Em desenvolvimento ativo por André Ricartes, na A.R. Geointeligência e Automação.</li>
+                    <li>A distribuição prevista é gratuita. O beta será aberto primeiro para quem pedir pelo WhatsApp.</li>
+                    <li>A base local do SNCI e a geração automática de confrontantes estão no roteiro das próximas versões.</li>
+                </ul>
+                <p class="mt-6 text-sm text-gray-500">Mais contexto no <a href="https://www.linkedin.com/feed/update/urn:li:activity:7518721297581907968/" target="_blank" rel="noopener noreferrer" class="text-agtech-emerald hover:underline">post de lançamento no LinkedIn</a>.</p>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+    <footer class="border-t border-white/10 bg-[#050505] py-12 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-2xl font-bold tracking-tighter text-white">
+                André<span class="text-agtech-emerald">Ricartes</span>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row items-center gap-3 text-gray-500 text-sm font-medium">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> A.R. Geointeligência e Automação Inova Simples (I.S.) · CNPJ 68.449.367/0001-20 · Bebedouro/SP</p>
+                <span class="hidden sm:inline text-gray-700">•</span>
+                <a href="../privacidade/" class="text-gray-400 hover:text-agtech-emerald transition-colors">Privacidade</a>
+            </div>
+            
+            <div class="flex gap-4">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/andrericartes/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="Conectar no LinkedIn" class="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-[#0A66C2] hover:bg-[#0A66C2]/10 transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/andrericartes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" class="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-pink-500 hover:bg-pink-500/10 transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 1 0 12.4 6.2 6.2 0 0 1 0-12.4zm0 2.2a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm6.4-3.1a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/></svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/AndreRicartes" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="Ver projetos no GitHub" class="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-500 hover:bg-gray-800 transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- WhatsApp flutuante -->
+    <a href="https://wa.me/5567996871410?text=Ol%C3%A1%20Andr%C3%A9%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20im%C3%B3vel%20rural." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" title="Falar no WhatsApp"
+       style="position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:9999px;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.35)">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4h.1c6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.3-6.2-3.5-8.3zM12 21.7a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 0 1-1.5-5.2C2.1 6.4 6.5 2 12 2c2.6 0 5.1 1 7 2.9a9.8 9.8 0 0 1 2.9 7c0 5.4-4.4 9.8-9.9 9.8zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.2c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5a9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+    </a>
+</body>
+</html>
