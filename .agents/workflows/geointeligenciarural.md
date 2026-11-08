@@ -9,7 +9,7 @@ Este Workspace tem como objetivo gerenciar a presença digital de André Ricarte
 2. Categorização de Assuntos (Multitemas)
 Para garantir que o Antigravity aplique as regras corretas, cada novo post deve ser classificado em um destes pilares:
 
-Estudo de Caso (Perícia/Posse): Foco em prova técnica, séries históricas e evidências biológicas (Ex: Fazenda Bela Vista).
+Estudo de Caso (Perícia/Posse): Foco em prova técnica, séries históricas e evidências biológicas (Ex: fazenda no Pantanal do Paiaguás; nunca citar o nome do imóvel ou do cliente).
 
 Inteligência Territorial (Infraestrutura): Foco em alta resolução, monitoramento de ativos e logística (Ex: Ecovias).
 
