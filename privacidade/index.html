@@ -32,12 +32,12 @@
                     },
                     colors: {
                         agtech: {
-                            black: '#0a0a0a',
+                            black: '#0F141C',
                             dark: '#141414',
                             card: '#1a1a1a',
-                            gray: '#262626',
-                            emerald: '#10b981',
-                            emeraldHover: '#059669',
+                            gray: '#1F2937',
+                            emerald: '#FF5F1F',
+                            emeraldHover: '#E04E12',
                             emeraldDark: '#064e3b',
                             light: '#e5e7eb',
                             muted: '#9ca3af'
@@ -59,7 +59,7 @@
     
     <style>
         body {
-            background-color: #0a0a0a;
+            background-color: #0F141C;
             color: #e5e7eb;
         }
         .glass-panel {
@@ -76,14 +76,14 @@
             transition: all 0.25s ease;
         }
         .glass-card:hover {
-            border-color: rgba(16, 185, 129, 0.3);
-            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.1);
+            border-color: rgba(255,95,31, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(255,95,31, 0.1);
         }
         .code-badge {
             font-family: 'JetBrains Mono', monospace;
-            background: rgba(16, 185, 129, 0.1);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.25);
+            background: rgba(255,95,31, 0.1);
+            color: #FF8A50;
+            border: 1px solid rgba(255,95,31, 0.25);
             padding: 0.15rem 0.5rem;
             border-radius: 0.375rem;
             font-size: 0.825rem;
@@ -92,14 +92,14 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0a0a0a;
+            background: #0F141C;
         }
         ::-webkit-scrollbar-thumb {
-            background: #262626;
+            background: #1F2937;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #10b981;
+            background: #FF5F1F;
         }
     </style>
     <meta property="og:image" content="https://www.andrericartes.com/assets/og-default.jpg" />
@@ -110,7 +110,7 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 </head>
-<body class="antialiased selection:bg-agtech-emerald selection:text-white">
+<body class="antialiased selection:bg-agtech-emerald selection:text-[#0F141C]">
 
     <!-- Decorações de Fundo (Background effects) -->
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
@@ -129,7 +129,7 @@
                 <a href="../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300" id="nav-home-link">Início</a>
                 <a href="../geointeligencia/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300" id="nav-geointeligencia-link">Geointeligência</a>
                 <a href="../geointeligencia/analises/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors duration-300" id="nav-analises-link">Análises</a>
-                <a href="#contato" class="text-sm font-semibold px-4 py-2 rounded-xl bg-agtech-emerald/10 border border-agtech-emerald/30 text-agtech-emerald hover:bg-agtech-emerald hover:text-white transition-all duration-300" id="nav-contato-btn">DPO / Contato</a>
+                <a href="#contato" class="text-sm font-semibold px-4 py-2 rounded-xl bg-agtech-emerald/10 border border-agtech-emerald/30 text-agtech-emerald hover:bg-agtech-emerald hover:text-[#0F141C] transition-all duration-300" id="nav-contato-btn">DPO / Contato</a>
             </nav>
             <!-- Botão Menu Hamburguer (Mobile) -->
             <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none" aria-label="Abrir menu" aria-expanded="false">
@@ -142,7 +142,7 @@
             </button>
         </div>
         <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-[#0a0a0af0] backdrop-blur-xl px-6 py-4 flex flex-col gap-4">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-[#0F141Cf0] backdrop-blur-xl px-6 py-4 flex flex-col gap-4">
             <a href="../" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors">Início</a>
             <a href="../geointeligencia/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors">Geointeligência</a>
             <a href="../geointeligencia/analises/" class="text-sm font-semibold text-gray-300 hover:text-agtech-emerald transition-colors">Análises</a>
@@ -540,7 +540,7 @@
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="mailto:privacidade@andrericartes.com" class="inline-flex items-center justify-center gap-3 px-6 py-4 bg-agtech-emerald hover:bg-agtech-emeraldHover text-white font-bold rounded-2xl transition-all shadow-[0_0_25px_rgba(16,185,129,0.25)] hover:shadow-[0_0_35px_rgba(16,185,129,0.4)]">
+                            <a href="mailto:privacidade@andrericartes.com" class="inline-flex items-center justify-center gap-3 px-6 py-4 bg-agtech-emerald hover:bg-agtech-emeraldHover text-[#0F141C] font-bold rounded-2xl transition-all shadow-[0_0_25px_rgba(255,95,31,0.25)] hover:shadow-[0_0_35px_rgba(255,95,31,0.4)]">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
@@ -570,7 +570,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 bg-[#050505] py-12 px-6">
+    <footer class="border-t border-white/10 bg-[#0B0F16] py-12 px-6">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-2xl font-bold tracking-tighter text-white">
                 <img src="/assets/hexagono.svg" alt="" aria-hidden="true" width="26" height="30" style="display:inline-block;vertical-align:-5px;margin-right:8px" />André<span class="text-agtech-emerald">Ricartes</span>
