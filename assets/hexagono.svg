@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="94 80 212 240" role="img" aria-label="A.R. Geointeligência">
+  <polygon points="200,90 295.26,145 295.26,255 200,310 104.74,255 104.74,145" fill="#121C28" stroke="#E2E8F0" stroke-width="12" stroke-linejoin="round"/>
+  <g stroke="#E2E8F0" stroke-width="12" stroke-linecap="round">
+    <line x1="200" y1="90" x2="200" y2="178"/>
+    <line x1="104.74" y1="255" x2="181" y2="211"/>
+    <line x1="219" y1="211" x2="295.26" y2="255"/>
+  </g>
+  <polygon points="200,180 220,200 200,220 180,200" fill="#FF5500" stroke="#E2E8F0" stroke-width="4"/>
+</svg>
