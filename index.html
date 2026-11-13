@@ -120,18 +120,27 @@
         }
         
         /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        :root {
+            --scrollbar-thumb: #64748B;
+            --scrollbar-track: #0F141C;
+            scrollbar-width: thin;
+            scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
         }
-        ::-webkit-scrollbar-track {
-            background: #0F141C; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1F2937; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #FF5F1F; 
+        @supports not (scrollbar-color: auto) {
+            ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: var(--scrollbar-track);
+            }
+            ::-webkit-scrollbar-thumb {
+                background: var(--scrollbar-thumb);
+                border-radius: 4px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #FF5F1F;
+            }
         }
     </style>
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
